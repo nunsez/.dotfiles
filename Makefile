@@ -1,21 +1,23 @@
 %:
 	@:
-.SILENT:
-.PHONY: help install Linux MacOS link unlink
-.DEFAULT_GOAL = install
-ARGS = $(filter-out $@, $(MAKECMDGOALS))
-
 SHELL := $(shell command -v bash)
-UNAME := $(shell uname -s)
-SCRIPTS := Linux MacOS link unlink notify_os
+ARGS = $(filter-out $@, $(MAKECMDGOALS))
+.DEFAULT_GOAL = install
 
-export DOTFILES_DIR=$(HOME)/.dotfiles
+.EXPORT_ALL_VARIABLES:
+
+UNAME := $(shell uname -s)
+DOTFILES_DIR := $(HOME)/.dotfiles
+SCRIPTS := Linux MacOS link unlink notify_os
 
 ifeq ($(UNAME), Darwin)
 	export OS=MacOS
 else ifeq ($(UNAME), Linux)
 	export OS=Linux
 endif
+
+.PHONY: help install $(SCRIPTS)
+.SILENT:
 
 help:
 	echo TODO help
