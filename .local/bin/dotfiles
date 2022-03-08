@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
+dotfiles_dir="${HOME}/.dotfiles"
+
 main() {
-  local public=(greet link)
+  local public=(greet link unlink remove)
 
   if [[ -z $1 ]]; then
     usage
@@ -23,11 +25,9 @@ greet() {
 link() {
   echo "Start linking..."
 
-  local dotfiles_dir="${HOME}/.dotfiles"
-
   ln -sf "${dotfiles_dir}/.zshrc" "${HOME}"
 
-  ln -sf "${dotfiles_dir}/.local/bin" "${HOME}"
+  ln -sf "${dotfiles_dir}/.local/bin" "${HOME}/.local"
 
   ln -sf "${dotfiles_dir}/.fonts.conf" "${HOME}"
   ln -sf "${dotfiles_dir}/.fonts" "${HOME}"
@@ -36,16 +36,30 @@ link() {
   ln -sf "${dotfiles_dir}/.gitignore_global" "${HOME}"
 
   update_font_cache
-  success "done!"
-  reload_shell
+  success "Done! You can reload shell now."
+}
+
+unlink() {
+  command unlink "${HOME}/.zshrc"
+
+  command unlink "${HOME}/.fonts.conf"
+  command unlink "${HOME}/.fonts"
+
+  command unlink "${HOME}/.gitconfig"
+  command unlink "${HOME}/.gitignore_global"
+
+  success "Symlinks removed. Type \"dotfiles remove\" to completely remove dotfiles from system."
+}
+
+remove() {
+  unlink"${HOME}/.local/bin"
+  rm -r "${dotfiles_dir}"
+
+  echo Hope to see you again...
 }
 
 update_font_cache() {
   fc-cache -f
-}
-
-reload_shell() {
-  source "${HOME}/.zshrc"
 }
 
 success() {
