@@ -52,8 +52,8 @@ unlink() {
 }
 
 remove() {
-  unlink"${HOME}/.local/bin"
-  rm -r "${dotfiles_dir}"
+  command unlink "${HOME}/.local/bin"
+  rm -rf "${dotfiles_dir}"
 
   echo Hope to see you again...
 }
