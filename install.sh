@@ -29,7 +29,7 @@ dotfiles_check() {
 }
 
 dotfiles_download() {
-  git clone https://github.com/nunsez/.dotfiles.git "${dotfiles_dir}"
+  git clone git@github.com:nunsez/.dotfiles.git "${dotfiles_dir}"
   success "Repository has been cloned to ${dotfiles_dir}"
 }
 
