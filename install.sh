@@ -7,7 +7,7 @@ main() {
   dotfiles_check
   dotfiles_download
 
-  "${dotfiles_dir}/.local/bin/dotfiles link"
+  "${dotfiles_dir}/.local/bin/dotfiles" link
 }
 
 tools_check() {
