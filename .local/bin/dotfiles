@@ -35,9 +35,6 @@ link() {
   ln -sf "${dotfiles_dir}/.gitconfig" "${HOME}"
   ln -sf "${dotfiles_dir}/.gitignore_global" "${HOME}"
 
-  ln -sf "${dotfiles_dir}/.config/Code/User/settings.json" "${HOME}/.config/Code/User"
-  ln -sf "${dotfiles_dir}/.config/Code/User/syncLocalSettings.json" "${HOME}/.config/Code/User"
-
   update_font_cache
   success "Done! You can reload shell now."
 }
@@ -52,9 +49,6 @@ unlink() {
 
   command unlink "${HOME}/.gitconfig"
   command unlink "${HOME}/.gitignore_global"
-
-  command unlink "${dotfiles_dir}/.config/Code/User/settings.json"
-  command unlink "${dotfiles_dir}/.config/Code/User/syncLocalSettings.json"
 
   success "Symlinks removed. Type \"dotfiles remove\" to completely remove dotfiles from system."
 }
