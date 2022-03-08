@@ -1,0 +1,96 @@
+{
+  "sync.gist": "d42da51da0304be600f8a2d5f842a00d",
+  "telemetry.telemetryLevel": "off",
+  "debug.console.fontSize": 18,
+  "debug.console.acceptSuggestionOnEnter": "on",
+  "markdown.preview.fontSize": 16,
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.cursorBlinking": true,
+  "editor.fontSize": 18,
+  "editor.fontFamily": "JuliaMono, Monaco, Hack, Consolas, monospace",
+  "editor.fontWeight": "300",
+  "editor.fontLigatures": false,
+  "editor.scrollbar.horizontalScrollbarSize": 14,
+  "editor.scrollbar.verticalScrollbarSize": 14,
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "modifications",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "editor.linkedEditing": false,
+  "editor.cursorStyle": "block",
+  "editor.minimap.maxColumn": 60,
+  "editor.minimap.scale": 2,
+  "editor.minimap.enabled": false,
+  "editor.showDeprecated": true,
+  "editor.comments.insertSpace": true,
+  "editor.renderWhitespace": "trailing",
+  "editor.detectIndentation": true,
+  "editor.insertSpaces": true,
+  "editor.suggestSelection": "recentlyUsedByPrefix",
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.suggest.showDeprecated": false,
+  "editor.suggest.showIcons": false,
+  "editor.largeFileOptimizations": true,
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      { "scope": "keyword.control", "settings": { "fontStyle": "" } },
+      { "scope": "entity.other.attribute-name", "settings": { "fontStyle": "" } },
+      { "scope": "source.ruby", "settings": { "foreground": "#EEFFFF" } },
+    ],
+    "variables": "#EEFFFF",
+    "keywords": "#81D4FA",
+    "strings": "#C3E88D",
+    "comments": "#6A9955",
+    "functions": "#82AAFF",
+    "types": "#FFCB6B"
+  },
+  "files.autoSave": "onFocusChange",
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  // "files.trimFinalNewlines": true,
+  "workbench.colorTheme": "Community Material Theme Palenight High Contrast",
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.tips.enabled": false,
+  "workbench.tree.indent": 16,
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.pinnedTabSizing": "shrink",
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.colorCustomizations": {
+    "editorBracketHighlight.foreground3": "#9CDCFE"
+  },
+  "[ruby]": {
+    "editor.rulers": [99],
+    "editor.tabSize": 2
+  },
+  "[javascript]": {
+    "editor.rulers": [119]
+  },
+  "[slim]": {
+    "editor.rulers": [179],
+    "editor.tabSize": 2
+  },
+  "[makefile]": {
+    "editor.insertSpaces": false
+  },
+  "[json]": {
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.suggest.insertMode": "replace"
+  },
+  "diffEditor.codeLens": true,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "window.menuBarVisibility": "toggle",
+  "window.restoreFullscreen": true,
+  "search.collapseResults": "auto",
+  "explorer.confirmDragAndDrop": false,
+
+  "indentRainbow.ignoreErrorLanguages": ["markdown", "ruby"],
+  "gitlens.codeLens.enabled": false,
+  // "solargraph.useBundler": true,
+  // "solargraph.diagnostics": true,
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "trunk.trunkGrayOutNonBlockingIssues": false,
+  "bracket-pair-colorizer-2.depreciation-notice": false,
+  "explorer.confirmDelete": false
+}
