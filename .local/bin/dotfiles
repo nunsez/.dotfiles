@@ -25,24 +25,23 @@ link() {
 
   local dotfiles_dir="${HOME}/.dotfiles"
 
-  ln -sf "${dotfiles_dir}/.zshrc" "${HOME}/.zshrc"
+  ln -sf "${dotfiles_dir}/.zshrc" "${HOME}"
 
-  ln -sf "${dotfiles_dir}/.local/bin" "${HOME}/.local/bin"
+  ln -sf "${dotfiles_dir}/.local/bin" "${HOME}"
 
-  ln -sf "${dotfiles_dir}/.fonts.conf" "${HOME}/.fonts.conf"
-  ln -sf "${dotfiles_dir}/.fonts" "${HOME}/.fonts"
+  ln -sf "${dotfiles_dir}/.fonts.conf" "${HOME}"
+  ln -sf "${dotfiles_dir}/.fonts" "${HOME}"
 
-  ln -sf "${dotfiles_dir}/.gitconfig" "${HOME}/.gitconfig"
-  ln -sf "${dotfiles_dir}/.gitignore_global" "${HOME}/.gitignore_global"
+  ln -sf "${dotfiles_dir}/.gitconfig" "${HOME}"
+  ln -sf "${dotfiles_dir}/.gitignore_global" "${HOME}"
 
   update_font_cache
-  reload_shell
-
   success "done!"
+  reload_shell
 }
 
 update_font_cache() {
-  fc-cache -fv
+  fc-cache -f
 }
 
 reload_shell() {
