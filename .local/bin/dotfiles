@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 main() {
-  local public=(foo greet)
+  local public=(greet link)
 
   if [[ -z $1 ]]; then
     usage
