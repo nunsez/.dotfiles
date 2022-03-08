@@ -1,0 +1,60 @@
+#!/usr/bin/env bash
+
+main() {
+  local public=(foo greet)
+
+  if [[ -z $1 ]]; then
+    usage
+  elif ! [[ ${public[*]} =~ $1 ]]; then
+    error "Command not found: $1"
+  else
+    $1
+  fi
+}
+
+usage() {
+  echo usage here
+}
+
+greet() {
+  echo "hello, dotfiles!"
+}
+
+link() {
+  echo "Start linking..."
+
+  local dotfiles_dir="${HOME}/.dotfiles"
+
+  ln -sf "${dotfiles_dir}/.zshrc" "${HOME}/.zshrc"
+
+  ln -sf "${dotfiles_dir}/.local/bin" "${HOME}/.local/bin"
+
+  ln -sf "${dotfiles_dir}/.fonts.conf" "${HOME}/.fonts.conf"
+  ln -sf "${dotfiles_dir}/.fonts" "${HOME}/.fonts"
+
+  ln -sf "${dotfiles_dir}/.gitconfig" "${HOME}/.gitconfig"
+  ln -sf "${dotfiles_dir}/.gitignore_global" "${HOME}/.gitignore_global"
+
+  update_font_cache
+  reload_shell
+
+  success "done!"
+}
+
+update_font_cache() {
+  fc-cache -fv
+}
+
+reload_shell() {
+  source "${HOME}/.zshrc"
+}
+
+success() {
+  printf "\\033[32mSUCCESS:\\033[0m %s\\n" "$@"
+}
+
+error() {
+  printf "\\033[31mERROR:\\033[0m %s\\n" "$@" >&2
+}
+
+main "$@"
