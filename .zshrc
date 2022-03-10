@@ -29,3 +29,6 @@ zedit() {
 
 alias ls="ls --color=auto"
 alias l="ls -lah"
+
+# Arch linux asdf autoload
+# source /opt/asdf-vm/asdf.sh
