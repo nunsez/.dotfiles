@@ -3,7 +3,7 @@
 dotfiles_dir="${HOME}/.dotfiles"
 
 main() {
-  local public=(greet link unlink remove)
+  local public=(greet link unlink remove push)
 
   if [[ -z $1 ]]; then
     usage
@@ -58,6 +58,15 @@ remove() {
   rm -rf "${dotfiles_dir}"
 
   echo Hope to see you again...
+}
+
+push() {
+  cd "${dotfiles_dir}" || return
+
+  git add --all
+  commit_message=$(TZ=Asia/Krasnoyarsk date +"dotfiles update: %Y-%m-%d %H:%M:%S")
+  git commit -m "${commit_message}"
+  git push
 }
 
 update_font_cache() {
