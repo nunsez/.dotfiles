@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 dotfiles_dir="${HOME}/.dotfiles"
 
 main() {
