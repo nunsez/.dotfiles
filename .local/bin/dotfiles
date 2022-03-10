@@ -70,7 +70,9 @@ push() {
 }
 
 update_font_cache() {
-  fc-cache -f
+  if [[ $(command -v fontconfig) ]]; then
+    fc-cache -f
+  fi
 }
 
 success() {
