@@ -29,7 +29,10 @@ link() {
 
   ln -sf "${dotfiles_dir}/.zshrc" "${HOME}"
 
-  mkdir -p "${HOME}.local"
+  if ! [[ -d "${HOME}/.local" ]]; then
+    mkdir "${HOME}/.local"
+  fi
+
   ln -sf "${dotfiles_dir}/.local/bin" "${HOME}/.local"
 
   ln -sf "${dotfiles_dir}/.fonts.conf" "${HOME}"
