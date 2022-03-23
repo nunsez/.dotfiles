@@ -30,5 +30,10 @@ zedit() {
 alias ls="ls --color=auto"
 alias l="ls -lah"
 
-# Arch linux asdf autoload
-# source /opt/asdf-vm/asdf.sh
+if [ -d "${HOME}/.asdf" ]; then
+  export ASDF_DIR="${HOME}/.asdf/"
+  source "${HOME}/.asdf/asdf.sh"
+#  fpath=(${ASDF_DIR}/completions $fpath)
+#  autoload -Uz compinit && compinit
+fi
+
