@@ -35,13 +35,9 @@ link() {
 
   ln -sf "${dotfiles_dir}/.local/bin" "${HOME}/.local"
 
-  ln -sf "${dotfiles_dir}/.fonts.conf" "${HOME}"
-  ln -sf "${dotfiles_dir}/.fonts" "${HOME}"
-
   ln -sf "${dotfiles_dir}/.gitconfig" "${HOME}"
   ln -sf "${dotfiles_dir}/.gitignore_global" "${HOME}"
 
-  update_font_cache
   success "Done! You can reload shell now."
 }
 
@@ -49,9 +45,6 @@ unlink() {
   echo "Start unlinking..."
 
   command unlink "${HOME}/.zshrc"
-
-  command unlink "${HOME}/.fonts.conf"
-  command unlink "${HOME}/.fonts"
 
   command unlink "${HOME}/.gitconfig"
   command unlink "${HOME}/.gitignore_global"
@@ -73,12 +66,6 @@ push() {
   commit_message=$(TZ=Asia/Krasnoyarsk date +"dotfiles update: %Y-%m-%d %H:%M:%S")
   git commit -m "${commit_message}"
   git push
-}
-
-update_font_cache() {
-  if [[ $(command -v fontconfig) ]]; then
-    fc-cache -f
-  fi
 }
 
 success() {
