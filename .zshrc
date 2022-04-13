@@ -36,4 +36,3 @@ if [ -d "${HOME}/.asdf" ]; then
 #  fpath=(${ASDF_DIR}/completions $fpath)
 #  autoload -Uz compinit && compinit
 fi
-
