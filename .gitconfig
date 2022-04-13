@@ -1,6 +1,7 @@
 [user]
 	email = mandrikov@pm.me
 	name = Alexander Mandrikov
+	signingkey = 01E284FEB4F531F38138125F88297A62F679BC2C
 
 [color]
 	ui = true
@@ -10,3 +11,5 @@
 
 [init]
 	defaultBranch = master
+[commit]
+	gpgsign = true
