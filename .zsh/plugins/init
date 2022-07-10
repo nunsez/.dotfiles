@@ -1,0 +1,34 @@
+# shellcheck shell=bash
+
+function load_plugin() {
+  local path="${ZSH_CUSTOM}/plugins/${1}"
+
+  if [ -f "${path}" ]; then
+    # shellcheck disable=SC1090
+    source "${path}"
+  fi
+}
+
+# https://github.com/ohmyzsh/ohmyzsh/blob/master/themes/robbyrussell.zsh-theme
+load_plugin 'robbyrussell.zsh-theme'
+
+# https://github.com/ohmyzsh/ohmyzsh/blob/master/lib/git.zsh
+load_plugin 'git.zsh'
+
+# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git
+# load_plugin 'git/git.plugin.zsh'
+
+# https://github.com/zsh-users/zsh-completions.git
+load_plugin 'zsh-completions/zsh-completions.plugin.zsh'
+
+# https://github.com/zsh-users/zsh-autosuggestions.git
+load_plugin 'zsh-autosuggestions/zsh-autosuggestions.plugin.zsh'
+
+# https://github.com/zsh-users/zsh-syntax-highlighting
+load_plugin 'zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh'
+
+# https://github.com/zdharma-continuum/fast-syntax-highlighting.git
+# load_plugin 'fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh'
+
+# https://github.com/zsh-users/zsh-history-substring-search.git
+load_plugin 'zsh-history-substring-search/zsh-history-substring-search.plugin.zsh'
