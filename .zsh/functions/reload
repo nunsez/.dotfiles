@@ -1,0 +1,5 @@
+# shellcheck shell=bash
+
+function reload() {
+  source "${ZSH_CUSTOM}/.zshrc"
+}

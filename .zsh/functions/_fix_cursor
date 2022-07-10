@@ -1,0 +1,5 @@
+# shellcheck shell=bash
+
+function _fix_cursor() {
+  echo -ne '\e[0 q'
+}
