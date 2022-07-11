@@ -32,9 +32,9 @@ export ZSH_CUSTOM="${DOTFILES_DIR}/.zsh"
 
 fpath=("${ZSH_CUSTOM}/functions" $fpath)
 
-autoload -Uz reload zedit
 autoload -Uz colors && colors
 autoload -Uz compinit && compinit
+autoload -Uz reload zedit
 
 # hash -d code=/home/alex/Apps/code
 
@@ -48,4 +48,8 @@ fi
 if [ -d "${HOME}/.asdf" ]; then
   export ASDF_DIR="${HOME}/.asdf/"
   source "${ASDF_DIR}/asdf.sh"
+fi
+
+if [ -f "${HOME}/.fzf.zsh" ]; then
+  source "${HOME}/.fzf.zsh"
 fi
