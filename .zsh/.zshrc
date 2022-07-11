@@ -26,9 +26,6 @@ unsetopt hist_beep # remove beep if you try to scroll up or down beyond the end 
 
 zstyle :compinstall filename "${HOME}/.zshrc"
 
-typeset -U path
-typeset -U fpath
-
 export GPG_TTY=$(tty)
 export DOTFILES_DIR="${HOME}/.dotfiles"
 export ZSH_CUSTOM="${DOTFILES_DIR}/.zsh"
