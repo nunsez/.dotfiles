@@ -42,7 +42,7 @@ source "${ZSH_CUSTOM}/aliases"
 source "${ZSH_CUSTOM}/plugins/init"
 
 if [[ -d "${HOME}/.local/bin" ]]; then
-  path=($path "${HOME}/.local/bin")
+  path=(${path} "${HOME}/.local/bin")
 fi
 
 if [ -d "${HOME}/.asdf" ]; then
