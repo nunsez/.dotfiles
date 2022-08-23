@@ -2,9 +2,10 @@
 
 set -e
 
-dotfiles_dir="${HOME}/.dotfiles"
+
 
 main() {
+  local dotfiles_dir="${HOME}/.dotfiles"
   local public=(greet link unlink remove push)
 
   if [[ -z $1 ]]; then
