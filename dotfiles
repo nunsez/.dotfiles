@@ -45,7 +45,7 @@ link() {
 unlink() {
   echo "Start unlinking..."
 
-  sed -i "/source ${dotfiles_dir}\/.zsh\/.zshrc/d" "${HOME}/.zshrc"
+  sed -i "/^source.*\.dotfiles\/\.zsh\/\.zshrc$/d" "${HOME}/.zshrc"
 
   command unlink "${HOME}/.gitconfig"
   command unlink "${HOME}/.gitignore_global"
