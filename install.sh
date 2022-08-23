@@ -34,11 +34,13 @@ dotfiles_download() {
 }
 
 source_zshrc() {
-  if [[ ! -f "${HOME}/.zshrc" ]]; then
-    touch "${HOME}/.zshrc"
+  local home_zshrc="${HOME}/.zshrc"
+
+  if [[ ! -f "${home_zshrc}" ]]; then
+    touch "${home_zshrc}"
   fi
 
-  sed -i "1isource ${dotfiles_dir}/.zsh/.zshrc"
+  sed -i "1isource ${dotfiles_dir}/.zsh/.zshrc" "${home_zshrc}"
 }
 
 make_symlinks() {
