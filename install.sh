@@ -6,12 +6,12 @@ main() {
   tools_check
   dotfiles_check
   dotfiles_download
-
-  "${dotfiles_dir}/dotfiles" link
+  source_zshrc
+  make_symlinks
 }
 
 tools_check() {
-  local tools=(git)
+  local tools=(git sed)
 
   for tool in "${tools[@]}"; do
     if ! [[ $(command -v "${tool}") ]]; then
@@ -31,6 +31,18 @@ dotfiles_check() {
 dotfiles_download() {
   git clone --recurse-submodules git@github.com:nunsez/.dotfiles.git "${dotfiles_dir}"
   success "Repository has been cloned to ${dotfiles_dir}"
+}
+
+source_zshrc() {
+  if [[ ! -f "${HOME}/.zshrc" ]]; then
+    touch "${HOME}/.zshrc"
+  fi
+
+  sed -i "1isource ${dotfiles_dir}/.zsh/.zshrc"
+}
+
+make_symlinks() {
+  "${dotfiles_dir}/dotfiles" link
 }
 
 success() {

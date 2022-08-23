@@ -27,15 +27,12 @@ greet() {
 link() {
   echo "Start linking..."
 
-  if ! [[ -d "${HOME}/.local/bin" ]]; then
+  if [[ ! -d "${HOME}/.local/bin" ]]; then
     mkdir -p "${HOME}/.local/bin"
   fi
 
   # link dotfiles
   ln -sf "${HOME}/.dotfiles/dotfiles" "${HOME}/.local/bin"
-
-  # link .zshrc
-  ln -sf "${dotfiles_dir}/.zsh/.zshrc" "${HOME}"
 
   # link git files
   ln -sf "${dotfiles_dir}/.gitconfig" "${HOME}"
