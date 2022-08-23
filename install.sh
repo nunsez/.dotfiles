@@ -37,7 +37,7 @@ source_zshrc() {
   local home_zshrc="${HOME}/.zshrc"
 
   if [[ ! -f "${home_zshrc}" ]]; then
-    echo "\n" > "${home_zshrc}"
+    echo -e "\n" > "${home_zshrc}"
   fi
 
   sed -i "1isource ${dotfiles_dir}/.zsh/.zshrc" "${home_zshrc}"
