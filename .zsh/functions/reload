@@ -2,5 +2,5 @@
 
 function reload() {
   # shellcheck disable=SC1091
-  source "${ZSH_CUSTOM}/.zshrc"
+  source "${HOME}/.zshrc"
 }
