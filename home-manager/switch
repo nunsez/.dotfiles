@@ -3,6 +3,9 @@
 set -eu
 set -o pipefail
 
-cd -P -- "$(dirname -- "$0")"
+# cd -P -- "$(dirname -- "$0")"
+cd -P ~/p/.dotfiles/home-manager
 
+export REPO="$(dirname $(pwd))"
 nix run . -- switch --flake .
+echo $REPO

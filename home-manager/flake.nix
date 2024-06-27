@@ -14,6 +14,7 @@
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
+      repo = builtins.getEnv "REPO";
     in
     {
       default = pkgs.home-manager;
@@ -29,6 +30,9 @@
 
         # Optionally use extraSpecialArgs
         # to pass through arguments to home.nix
+        extraSpecialArgs = {
+          inherit repo;
+        };
       };
     };
   };

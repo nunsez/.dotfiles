@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, repo, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -36,7 +36,10 @@
     # '')
 
     (pkgs.writeShellScriptBin "hm-switch" ''
-      source ${./switch}
+    set -eu
+    set -o pipefail
+    cd -P -- ${repo}
+    nix run . -- switch --flake .
     '')
   ];
 
@@ -53,6 +56,7 @@
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
+    ".x".text = "foo b2";
   };
 
   # Home Manager can also manage your environment variables through

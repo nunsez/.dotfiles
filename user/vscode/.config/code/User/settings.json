@@ -1,0 +1,202 @@
+{
+  "telemetry.telemetryLevel": "off",
+
+  "terminal.integrated.fontSize": 18,
+  "terminal.integrated.cursorBlinking": true,
+  "accessibility.signals.terminalBell": {
+      "sound": "off",
+      "announcement": "auto"
+  },
+  "terminal.integrated.enableVisualBell": false,
+
+  "editor.fontSize": 18,
+  "editor.fontFamily": "JuliaMono, Monaco, Hack, Consolas, 'Droid Sans Mono', 'monospace', monospace",
+  "editor.fontWeight": "300",
+  "editor.fontLigatures": false,
+  "editor.scrollbar.horizontalScrollbarSize": 14,
+  "editor.scrollbar.verticalScrollbarSize": 14,
+  "editor.formatOnSave": false,
+  "editor.formatOnSaveMode": "modifications",
+  "editor.defaultFormatter": "EditorConfig.EditorConfig",
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "editor.inlayHints.enabled": "on",
+  "editor.guides.indentation": true,
+  "editor.lineNumbers": "on",
+  "editor.glyphMargin": true,
+  "editor.linkedEditing": false,
+  "editor.cursorStyle": "line",
+  "editor.minimap.maxColumn": 60,
+  "editor.minimap.scale": 2,
+  "editor.minimap.enabled": false,
+  "editor.showDeprecated": true,
+  "editor.comments.insertSpace": true,
+  "editor.renderWhitespace": "trailing",
+  "editor.detectIndentation": true,
+  "editor.insertSpaces": true,
+  "editor.suggestSelection": "recentlyUsedByPrefix",
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.suggest.showDeprecated": false,
+  "editor.suggest.showIcons": false,
+  "editor.language.colorizedBracketPairs": [["[", "]"], ["(", ")"], ["{", "}"]],
+  "editor.largeFileOptimizations": true,
+
+  "editor.tokenColorCustomizations": {
+      // Whie: EEFFFF EEFFE3
+      // Gray: 676E95
+      // Light-Gray: BABED8
+      // Orange: F78C6C FF9CAC
+      // Cyan: 89DDFF 81D4FA 2AACB8
+      // Light-Green: C3E88D F771E0
+      // Dark-Green: 00AA44 5F826B
+      // Blue: 82AAFF
+      // Yellow: FFCB6B
+      // Red: F07178 F75464 FF5370
+      // Purple: C77DBB
+      // Violet: D0D0FF C792EA
+
+      "variables": "#EEFFFF",
+      "keywords": "#81D4FA",
+      "strings": "#C3E88D",
+      "comments": "#00AA44",
+      "functions": "#82AAFF",
+      "types": "#FFCB6B",
+
+      "textMateRules": [
+          // Common
+          { "scope": "keyword.control", "settings": { "fontStyle": "" } },
+          { "scope": "constant.character.escape", "settings": { "foreground": "#81D4FA" } },
+          { "scope": "entity.other.attribute-name", "settings": { "fontStyle": "" } },
+          { "scope": "entity.other.inherited-class", "settings": { "foreground": "#C3E88D", } },
+          { "scope": "variable.parameter", "settings": { "foreground": "#F07178", "fontStyle": "" } },
+          { "scope": "variable.language.self", "settings": { "fontStyle": "" } },
+          { "scope": "comment", "settings": { "foreground": "#00AA44", "fontStyle": "" } },
+          // { "scope": "punctuation.definition.comment", "settings": { "foreground": "#00AA44" , "fontStyle": "" } },
+          // { "scope": "punctuation.definition.comment.shell", "settings": { "foreground": "#00AA44" } },
+          // { "scope": "punctuation.definition.comment.json.comments", "settings": { "foreground": "#00AA44" , "fontStyle": "" } },
+          { "scope": "comment punctuation.definition.comment", "settings": { "foreground": "#00AA44" , "fontStyle": "" } },
+
+          // Ruby
+          { "scope": "source.ruby", "settings": { "foreground": "#EEFFFF" } },
+          // { "scope": "punctuation.definition.comment.ruby", "settings": { "foreground": "#00AA44" , "fontStyle": "" } },
+          { "scope": "variable.other.constant.ruby", "settings": { "foreground": "#F07178" } },
+          { "scope": "constant.other.symbol.hashkey.parameter.function.ruby", "settings": {"foreground": "#F07178" } },
+          { "scope": "variable.other.block.ruby", "settings": { "foreground": "#F07178" } },
+          { "scope": "keyword.other.special-method.ruby", "settings": { "foreground": "#82AAFF" } },
+          // { "scope": "string.quoted.single.ruby", "settings": { "foreground": "#C3E88D" } },
+          { "scope": "variable.language.self.ruby", "settings": {"foreground": "#F07178" } },
+          { "scope": "variable.parameter.function.ruby", "settings": { "foreground": "#F07178", "fontStyle": "" } },
+          { "scope": "constant.language.symbol.hashkey.ruby", "settings": { "foreground": "#F78C6C" } },
+          { "scope": "constant.language.symbol.ruby", "settings": { "foreground": "#F78C6C" } },
+          { "scope": "constant.language.nil.ruby", "settings": { "foreground": "#F78C6C" } },
+          { "scope": "constant.language.boolean.ruby", "settings": { "foreground": "#F78C6C" } },
+
+          // Elixir
+          { "scope": "source.elixir", "settings": { "foreground": "#EEFFFF" } },
+          { "scope": "parameter.variable.function.elixir", "settings": { "foreground": "#FF5370" } },
+          { "scope": "entity.name.function-call.elixir", "settings": { "foreground": "#82AAFF" } },
+          // { "scope": "variable.other.constant.elixir", "settings": { "foreground": "#FFCB6B" } },
+          { "scope": "comment.unused.elixir", "settings": { "foreground": "#A6ACCD" } },
+          { "scope": "comment.wildcard.elixir", "settings": { "foreground": "#FF5370" } },
+          { "scope": "constant.language", "settings": { "foreground": "#F78C6C" } },
+          { "scope": "keyword.other", "settings": { "foreground": "#82AAFF" } },
+
+          // Kotlin
+          { "scope": "source.kotlin", "settings": { "foreground": "#EEFFFF" } },
+          { "scope": "meta.template.expression.kotlin", "settings": { "foreground": "#EEFFFF" } },
+      ]
+  },
+
+  "files.autoSave": "onFocusChange",
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  // "files.trimFinalNewlines": true,
+
+  "workbench.colorTheme": "Material Theme Palenight High Contrast",
+  "workbench.tips.enabled": false,
+  "workbench.tree.indent": 16,
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.pinnedTabSizing": "shrink",
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.focusRecentEditorAfterClose": false,
+  "workbench.colorCustomizations": {
+      "editorBracketHighlight.foreground3": "#9CDCFE"
+  },
+
+  "[elixir]": {
+      "editor.rulers": [119],
+      "editor.tabSize": 2,
+  },
+
+  "[ruby]": {
+      "editor.rulers": [
+          120
+      ],
+      "editor.tabSize": 2,
+      "files.trimTrailingWhitespace": true,
+      "files.trimFinalNewlines": true,
+      "editor.semanticHighlighting.enabled": true
+  },
+
+  "[javascript]": {
+      "editor.rulers": [119]
+  },
+
+  "[slim]": {
+      "editor.rulers": [179],
+      "editor.tabSize": 2
+  },
+
+  "[makefile]": {
+      "editor.insertSpaces": false
+  },
+
+  "[json]": {
+      "editor.quickSuggestions": {
+          "strings": true
+      },
+      "editor.suggest.insertMode": "replace",
+      "editor.defaultFormatter": "vscode.json-language-features"
+  },
+
+  "[xml]": {
+      "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+
+  "debug.console.fontSize": 16,
+  "debug.console.acceptSuggestionOnEnter": "on",
+
+  "diffEditor.codeLens": true,
+  "diffEditor.ignoreTrimWhitespace": true,
+
+  "explorer.confirmDelete": false,
+
+  "markdown.preview.fontSize": 16,
+
+  "window.menuBarVisibility": "toggle",
+  "window.restoreFullscreen": true,
+
+  "search.collapseResults": "auto",
+
+  "security.workspace.trust.untrustedFiles": "open",
+
+  "explorer.confirmDragAndDrop": false,
+
+
+  // Plugin settings
+
+  "indentRainbow.ignoreErrorLanguages": ["markdown", "ruby", "elixir"],
+  "indentRainbow.colorOnWhiteSpaceOnly": true,
+  "gitlens.codeLens.enabled": false,
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "elixirLS.suggestSpecs": false,
+
+  // "rubyLsp.rubyVersionManager": "custom",
+  // "rubyLsp.customRubyCommand": "eval \"$(rtx env ruby@3.2.2 --shell bash)\"",
+
+  "[html]": {
+      "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "workbench.editor.showTabs": "none"
+}
