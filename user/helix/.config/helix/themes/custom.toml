@@ -1,0 +1,41 @@
+inherits = "material_deep_ocean"
+
+"constructor" = "yellow"
+
+"constant" = "red"
+"constant.character.escape" = "cyan"
+"constant.numeric" = "orange"
+
+"string" = "green"
+"string.regexp" = "cyan"
+"string.special" = "green"
+"string.special.symbol" = "orange"
+
+"comment" = { fg = "comment" }
+
+"variable" = "white"
+"variable.parameter" = { fg = "red" }
+"variable.builtin" = "red"
+"variable.other" = "white"
+# "variable.other.member" = "white"
+
+"label" = "orange"
+
+"punctuation" = "cyan"
+
+"keyword" = "cyan"
+"keyword.storage" = "cyan"
+
+"operator" = "cyan"
+
+"function" = "blue"
+"function.macro" = "cyan"
+
+"tag" = "red"
+"attribute" = "purple"
+
+"namespace" = { fg = "yellow" }
+
+"special" = "cyan"
+
+"ui.virtual.indent-guide" = "comment"

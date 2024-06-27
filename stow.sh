@@ -14,3 +14,4 @@ function stow_user() {
 
 stow_user "zsh"
 stow_user "git"
+stow_user "helix"

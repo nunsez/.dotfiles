@@ -1,0 +1,39 @@
+theme = "custom"
+
+[editor]
+# Use relative line nubmers
+line-number = "relative"
+# Save file on focus change
+auto-save = true
+# Use Unix-style new line character
+default-line-ending = "lf"
+# Show currently open buffers, only when more than one exists
+bufferline = "multiple"
+# Highlight all lines with a cursor
+# cursorline = true
+# Force the theme to show colors
+true-color = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.lsp]
+display-inlay-hints = true
+# Show LSP messages in the status line
+display-messages = true
+
+[editor.statusline]
+left = ["mode", "spinner", "version-control", "file-name"]
+
+[editor.indent-guides]
+character = "╎"
+render = true
+skip-levels = 1
+
+[keys.normal]
+"A-," = "goto_previous_buffer"
+"A-." = "goto_next_buffer"
+"A-w" = ":buffer-close"
+"A-/" = "repeat_last_motion"
