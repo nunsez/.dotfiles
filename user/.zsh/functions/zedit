@@ -1,5 +1,5 @@
 # shellcheck shell=bash
 
 function zedit() {
-  vim "${HOME}/.zshrc"
+  "${EDITOR}" "${HOME}/.zshrc"
 }
