@@ -2,8 +2,3 @@
 
 alias ls="ls --color=auto --group-directories-first"
 alias l="command ls -lah --color=auto --group-directories-first"
-
-if command -v nnn; then
-    alias ls="nnn -dex"
-    alias n="n -eEoRSx"
-fi

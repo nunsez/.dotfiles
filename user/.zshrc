@@ -28,7 +28,7 @@ zstyle :compinstall filename "${HOME}/.zshrc"
 
 export GPG_TTY=$(tty)
 export DOTFILES_DIR="${HOME}/.dotfiles"
-export ZSH_CUSTOM="${DOTFILES_DIR}/.zsh"
+export ZSH_CUSTOM="${HOME}/.zsh"
 
 fpath=("${ZSH_CUSTOM}/functions" $fpath)
 
@@ -36,18 +36,11 @@ autoload -Uz colors && colors
 autoload -Uz compinit && compinit
 autoload -Uz reload zedit
 
-# hash -d code=/home/alex/Apps/code
-
 source "${ZSH_CUSTOM}/aliases"
 source "${ZSH_CUSTOM}/plugins/init"
 
 if [[ -d "${HOME}/.local/bin" ]]; then
   path=(${path} "${HOME}/.local/bin")
-fi
-
-if [ -d "${HOME}/.asdf" ]; then
-  export ASDF_DIR="${HOME}/.asdf/"
-  source "${ASDF_DIR}/asdf.sh"
 fi
 
 if [ -f "${HOME}/.fzf.zsh" ]; then
