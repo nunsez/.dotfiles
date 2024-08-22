@@ -26,7 +26,7 @@
 #
 # default_flags:
 
-default_flags: "--sizes --git-ignored --show-git-info --no-trim-root"
+default_flags: "--sizes --hidden --git-ignored --show-git-info --sort-by-type-dirs-first"
 
 ###############################################################
 # Terminal's title
