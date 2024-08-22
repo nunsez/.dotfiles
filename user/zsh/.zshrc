@@ -7,7 +7,7 @@ bindkey '\e[3~' delete-char
 
 setopt appendhistory
 setopt bg_nice # lower priority to bg processes
-setopt correct # check all the commands you type and if they don't exist, but there is one with a similar name, it will ask you if you meant that one instead
+# setopt correct # check all the commands you type and if they don't exist, but there is one with a similar name, it will ask you if you meant that one instead
 setopt inc_append_history  # save history after every command
 setopt hist_ignore_dups # not to store a history line if it's the same as the previous one
 setopt hist_find_no_dups # if duplicate lines have been saved, searches backwards with editor commands don't show them more than once
@@ -30,6 +30,12 @@ export GPG_TTY=$(tty)
 export DOTFILES_DIR="${HOME}/.dotfiles"
 export ZSH_CUSTOM="${HOME}/.zsh"
 
+if command -v hx &> /dev/null; then
+  export EDITOR="hx"
+else
+  export EDITOR="nano"
+fi
+
 fpath=("${ZSH_CUSTOM}/functions" $fpath)
 
 autoload -Uz colors && colors
@@ -46,3 +52,12 @@ fi
 if [ -f "${HOME}/.fzf.zsh" ]; then
   source "${HOME}/.fzf.zsh"
 fi
+
+if [ -f "${HOME}/.local/bin/mise" ]; then
+  eval "$(${HOME}/.local/bin/mise activate zsh)"
+fi
+
+if [ -f "${HOME}/.nix-profile/etc/profile.d/nix.sh" ]; then
+  source "${HOME}/.nix-profile/etc/profile.d/nix.sh"
+fi
+
