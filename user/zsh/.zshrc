@@ -61,3 +61,7 @@ if [ -f "${HOME}/.nix-profile/etc/profile.d/nix.sh" ]; then
   source "${HOME}/.nix-profile/etc/profile.d/nix.sh"
 fi
 
+if [ -f "${HOME}/.config/broot/launcher/bash/br" ]; then
+  source "${HOME}/.config/broot/launcher/bash/br"
+fi
+
