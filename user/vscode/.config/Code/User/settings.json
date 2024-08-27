@@ -92,6 +92,8 @@
             { "scope": "constant.language.symbol.ruby", "settings": { "foreground": "#F78C6C" } },
             { "scope": "constant.language.nil.ruby", "settings": { "foreground": "#F78C6C" } },
             { "scope": "constant.language.boolean.ruby", "settings": { "foreground": "#F78C6C" } },
+            { "scope": "constant.other.symbol.ruby", "settings": { "foreground": "#F78C6C"} }, // SG
+            { "scope": "constant.other.symbol.hashkey.ruby", "settings": { "foreground": "#F78C6C"} }, // SG
 
             // Elixir
             { "scope": "source.elixir", "settings": { "foreground": "#EEFFFF" } },
@@ -102,6 +104,8 @@
             { "scope": "comment.wildcard.elixir", "settings": { "foreground": "#FF5370" } },
             { "scope": "constant.language", "settings": { "foreground": "#F78C6C" } },
             { "scope": "keyword.other", "settings": { "foreground": "#82AAFF" } },
+            { "scope": "constant.other.symbol.elixir", "settings": { "foreground": "#F78C6C" } },
+            { "scope": "variable.other.constant.elixir", "settings": { "foreground": "#FFCB6B" } },
 
             // Kotlin
             { "scope": "source.kotlin", "settings": { "foreground": "#EEFFFF" } },

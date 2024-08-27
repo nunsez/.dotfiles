@@ -36,3 +36,5 @@ stow_user "lazygit"
 remove_if_not_link "${HOME}/.config/broot/conf.hjson"
 remove_if_not_link "${HOME}/.config/broot/verbs.hjson"
 stow_user "broot"
+
+stow_user "vscode"
