@@ -41,6 +41,7 @@ fpath=("${ZSH_CUSTOM}/functions" $fpath)
 autoload -Uz colors && colors
 autoload -Uz compinit && compinit
 autoload -Uz reload zedit
+autoload -Uz reload zedit fif y
 
 source "${ZSH_CUSTOM}/aliases"
 source "${ZSH_CUSTOM}/plugins/init"
