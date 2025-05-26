@@ -191,7 +191,7 @@
 
     // Plugin settings
 
-    "indentRainbow.ignoreErrorLanguages": ["markdown", "ruby", "elixir"],
+    "indentRainbow.ignoreErrorLanguages": ["markdown", "ruby", "elixir", "commonlisp"],
     "indentRainbow.colorOnWhiteSpaceOnly": true,
     "gitlens.codeLens.enabled": false,
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
