@@ -206,5 +206,6 @@
     "workbench.editor.showTabs": "none",
     "v-analyzer.serverPath": "~/.config/v-analyzer/bin/v-analyzer",
     "workbench.editor.limit.value": 35,
-    "dart.insertArgumentPlaceholders": false
+    "dart.insertArgumentPlaceholders": false,
+    "cSpell.language": "en,ru"
 }
