@@ -28,13 +28,16 @@ function stow_user() {
     stow --restow --verbose --target "${HOME}" --dir "${USER_DIR}" "${package}"
 }
 
-stow_user "zsh"
+# stow_user "zsh"
+# TODO: replace rm -rf
+rm -rf "${HOME}/.config/fish"
+stow_user "fish"
 stow_user "git"
 stow_user "helix"
 stow_user "lazygit"
 
-remove_if_not_link "${HOME}/.config/broot/conf.hjson"
-remove_if_not_link "${HOME}/.config/broot/verbs.hjson"
-stow_user "broot"
+# remove_if_not_link "${HOME}/.config/broot/conf.hjson"
+# remove_if_not_link "${HOME}/.config/broot/verbs.hjson"
+# stow_user "broot"
 
 stow_user "vscode"
