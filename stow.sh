@@ -29,8 +29,6 @@ function stow_user() {
 }
 
 # stow_user "zsh"
-# TODO: replace rm -rf
-rm -rf "${HOME}/.config/fish"
 stow_user "fish"
 stow_user "git"
 stow_user "helix"
