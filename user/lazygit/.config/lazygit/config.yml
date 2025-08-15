@@ -1,3 +1,5 @@
+git:
+  autoForwardBranches: "allBranches"
 gui:
-  sidePanelWidth: 0.45
+  sidePanelWidth: 0.33
   language: "en"
