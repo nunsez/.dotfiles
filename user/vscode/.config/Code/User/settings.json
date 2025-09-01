@@ -3,6 +3,7 @@
     "terminal.integrated.defaultProfile.linux": "fish",
     "terminal.integrated.fontSize": 18,
     "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.initialHint": false,
 
     "terminal.integrated.enableVisualBell": false,
     "accessibility.signals.terminalBell": {
@@ -12,7 +13,9 @@
 
     // disable AI
     "chat.agent.enabled": false,
+    "chat.commandCenter.enabled": false,
     "chat.mcp.enabled": false,
+    "inlineChat.accessibleDiffView": "off",
 
     "editor.fontSize": 18,
     "editor.fontFamily": "JuliaMono, Monaco, Hack, Consolas, 'Droid Sans Mono', 'monospace', monospace",
