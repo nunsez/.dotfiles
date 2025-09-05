@@ -1,7 +1,11 @@
 [tools]
+caddy = "latest"
+fd = "latest"
+fzf = "latest"
 just = "latest"
 lazygit = "latest"
 overmind = "latest"
+ripgrep = "latest"
 yazi = "latest"
 
 [settings]
