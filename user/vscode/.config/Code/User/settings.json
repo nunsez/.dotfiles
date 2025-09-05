@@ -214,8 +214,21 @@
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "elixirLS.suggestSpecs": false,
 
+    "rust-analyzer.check.command": "clippy",
+
     // "rubyLsp.rubyVersionManager": "custom",
     // "rubyLsp.customRubyCommand": "eval \"$(mise env ruby@3.2.2 --shell bash)\"",
+
+    "rubyLsp.enabledFeatures": {
+        "inlayHint": false,
+        "codeLens": false,
+    },
+
+    "rubyLsp.featureFlags": {
+        "fullTestDiscovery": false,
+        "launcher": true,
+        "tapiocaAddon": false
+    },
 
     "v-analyzer.serverPath": "~/.config/v-analyzer/bin/v-analyzer",
     "dart.insertArgumentPlaceholders": false,
