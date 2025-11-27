@@ -1,9 +1,9 @@
 if status is-interactive
     # Disable greeting
     set -g fish_greeting
-    set -g GPG_TTY (tty)
+    set -gx GPG_TTY (tty)
     # Erlang/Elixir history
-    set -g ERL_AFLAGS "-kernel shell_history enabled"
+    set -gx ERL_AFLAGS "-kernel shell_history enabled"
 
     # Editor selection
     if command -v hx >/dev/null
