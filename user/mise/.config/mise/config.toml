@@ -2,6 +2,7 @@
 caddy = "latest"
 fd = "latest"
 fzf = "latest"
+hurl = "latest"
 just = "latest"
 lazygit = "latest"
 overmind = "latest"

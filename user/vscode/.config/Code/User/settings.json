@@ -1,241 +1,279 @@
 {
-    "telemetry.telemetryLevel": "off",
-    "terminal.integrated.defaultProfile.linux": "fish",
-    "terminal.integrated.fontSize": 18,
-    "terminal.integrated.cursorBlinking": true,
-    "terminal.integrated.initialHint": false,
+  "telemetry.telemetryLevel": "off",
+  "chat.agent.enabled": false,
+  "chat.mcp.access": "none",
+  "moonbit.ai.telemetry": "off",
 
-    "terminal.integrated.enableVisualBell": false,
-    "accessibility.signals.terminalBell": {
-        "sound": "off",
-        "announcement": "auto"
+  "terminal.integrated.defaultProfile.linux": "fish",
+  "terminal.integrated.defaultProfile.osx": "fish",
+  "terminal.integrated.fontSize": 18,
+  "terminal.integrated.fontLigatures.enabled": false,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.initialHint": false,
+  "terminal.integrated.enableVisualBell": false,
+
+  "accessibility.signals.terminalBell": {
+    "sound": "off",
+    "announcement": "auto",
+  },
+
+  "editor.fontSize": 16,
+  "editor.fontFamily": "JuliaMono, Monaco, Hack, Consolas, 'Droid Sans Mono', monospace",
+  "editor.fontWeight": "300",
+  "editor.fontLigatures": false,
+  "editor.scrollbar.horizontalScrollbarSize": 16,
+  "editor.scrollbar.verticalScrollbarSize": 16,
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file", // modifications
+  "editor.defaultFormatter": "EditorConfig.EditorConfig",
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "editor.inlayHints.enabled": "on",
+  "editor.guides.indentation": true,
+  "editor.lineNumbers": "on",
+  "editor.glyphMargin": true,
+  "editor.cursorStyle": "line",
+  "editor.minimap.enabled": true,
+  "editor.minimap.maxColumn": 60,
+  "editor.minimap.scale": 2,
+  "editor.minimap.renderCharacters": false,
+  "editor.showDeprecated": true,
+  "editor.comments.insertSpace": true,
+  "editor.renderWhitespace": "trailing",
+  "editor.detectIndentation": true,
+  "editor.insertSpaces": true,
+  "editor.suggestSelection": "recentlyUsedByPrefix",
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.suggest.showDeprecated": false,
+  "editor.suggest.showIcons": false,
+  // Disable brackets highlight
+  "editor.language.colorizedBracketPairs": [
+    // ["[", "]"],
+    // ["(", ")"],
+    // ["{", "}"],
+  ],
+  "editor.largeFileOptimizations": true,
+
+  "editor.semanticTokenColorCustomizations": {
+    "rules": {
+      "parameter.label:dart": { "foreground": "#d7dae0" },
+      "property:dart": { "foreground": "#d7dae0" },
+      // "annotation:dart": { "foreground": "#56b6c2" },
+      "annotation:dart": { "foreground": "#d7dae0" },
+      // "variable:dart": { "foreground": "#d7dae0" },
+      "variable:dart": { "foreground": "#d19a66" },
+      "enumMember": "#98c379"
     },
+  },
 
-    // disable AI
-    "chat.agent.enabled": false,
-    "chat.commandCenter.enabled": false,
-    "chat.mcp.enabled": false,
-    "inlineChat.accessibleDiffView": "off",
+  "editor.tokenColorCustomizations": {
+    // "keywords": "#c678dd",
+    "variables": "#d7dae0",
+    "functions": "#61afef",
+    "strings": "#98c379",
+    // "comments": "#7f848e",
+    // "types": "#e5c07b",
+    // "numbers": "#d19a66",
 
-    "editor.fontSize": 18,
-    "editor.fontFamily": "JuliaMono, Monaco, Hack, Consolas, 'Droid Sans Mono', 'monospace', monospace",
-    "editor.fontWeight": "300",
-    "editor.fontLigatures": false,
-    "editor.scrollbar.horizontalScrollbarSize": 14,
-    "editor.scrollbar.verticalScrollbarSize": 14,
+    // Minimal
+    "keywords": "#d7dae0",
+    "comments": "#c678dd",
+    "numbers": "#98c379",
+    "types": "#d7dae0",
+
+    "textMateRules": [
+      { "scope": "variable.parameter", "settings": { "fontStyle": "" } },
+      { "scope": "comment", "settings": { "fontStyle": "" } },
+      { "scope": "keyword", "settings": { "foreground": "#d7dae0" } },
+      { "scope": "string.regexp", "settings": { "foreground": "#98c379" } },
+      // { "scope": "constant.numeric", "settings": { "foreground": "#98c379" } },
+
+      // Minimal
+      { "scope": "entity.name.type.module", "settings": { "foreground": "#d7dae0" } },
+      { "scope": "keyword.operator.arithmetic", "settings": { "foreground": "#d7dae0" } },
+      { "scope": "keyword.operator.assignment", "settings": { "foreground": "#d7dae0" } },
+      { "scope": "keyword.operator.comparison", "settings": { "foreground": "#d7dae0" } },
+      { "scope": "keyword.operator.logical", "settings": { "foreground": "#d7dae0" } },
+      { "scope": "keyword.operator.new", "settings": { "foreground": "#d7dae0" } },
+      { "scope": "constant.character.escape", "settings": { "foreground": "#d19a66" } },
+      { "scope": "constant.language", "settings": { "foreground": "#98c379" } },
+      { "scope": "variable.language", "settings": { "foreground": "#d7dae0" } },
+      { "scope": "punctuation.section.embedded", "settings": { "foreground": "#7f848e" } },
+      { "scope": "keyword.other.special-method", "settings": { "foreground": "#d7dae0" } },
+      { "scope": "comment.unused", "settings": { "foreground": "#7f848e" } },
+      // { "scope": "entity.name.type.class", "settings": { "foreground": "#d7dae0" } },
+      // { "scope": "constant.other.symbol", "settings": { "foreground": "#d19a66" } },
+
+      // Elixir
+      { "scope": "variable.other.readwrite.elixir", "settings": { "foreground": "#d7dae0" } },
+      { "scope": "constant.language.symbol.elixir", "settings": { "foreground": "#d19a66" } },
+      // { "scope": "variable.other.constant.elixir", "settings": { "foreground": "#56b6c2" } },
+      { "scope": "variable.other.constant.elixir", "settings": { "foreground": "#d7dae0" } },
+      { "scope": "entity.name.function.typespec.elixir", "settings": { "foreground": "#d7dae0" } },
+      { "scope": "entity.name.function.call.local.elixir", "settings": { "foreground": "#61afef" } },
+      { "scope": "constant.language.symbol.double-quoted.elixir", "settings": { "foreground": "#d19a66" } },
+
+      // Dart
+      { "scope": "entity.name.type.class", "settings": { "foreground": "#d7dae0" } },
+      { "scope": "variable.parameter", "settings": { "foreground": "#d19a66" } },
+    ],
+  },
+
+  "files.autoSave": "onFocusChange",
+  "files.eol": "auto",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+
+  "workbench.colorTheme": "One Dark Pro Darker",
+  "workbench.tips.enabled": false,
+  "workbench.tree.indent": 20,
+  "workbench.tree.renderIndentGuides": "always",
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.value": 35,
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.focusRecentEditorAfterClose": false,
+  "workbench.editor.showTabs": "multiple",
+  "workbench.editor.tabSizing": "fit",
+  "workbench.editor.wrapTabs": true,
+  "workbench.layoutControl.enabled": false,
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+
+  "workbench.colorCustomizations": {
+    "editorCursor.foreground": "#ffcc00",
+    "editorBracketHighlight.foreground1": "#9cdcfe",
+    "editorBracketHighlight.foreground2": "#e79557",
+    "editorBracketHighlight.foreground3": "#e894c9",
+    "editorBracketHighlight.foreground4": "#f1fa8c",
+    "editorBracketHighlight.foreground5": "#f7768e",
+    "editorBracketHighlight.foreground6": "#ecc53d",
+    "editorBracketHighlight.unexpectedBracket.foreground": "#ff3333",
+  },
+
+  "[elixir]": {
+    "editor.rulers": [119],
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "JakeBecker.elixir-ls",
+  },
+
+  "[ruby]": {
+    "editor.rulers": [119],
+    "editor.tabSize": 2,
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "editor.semanticHighlighting.enabled": true,
+  },
+
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    "editor.rulers": [92],
+  },
+
+  "[javascript]": {
+    "editor.rulers": [119],
+  },
+
+  "[dart]": {
     "editor.formatOnSave": true,
-    "editor.formatOnSaveMode": "file", // modifications
-    "editor.defaultFormatter": "EditorConfig.EditorConfig",
-    "editor.unicodeHighlight.nonBasicASCII": false,
-    "editor.bracketPairColorization.enabled": true,
-    "editor.guides.bracketPairs": true,
-    "editor.inlayHints.enabled": "on",
-    "editor.guides.indentation": true,
-    "editor.lineNumbers": "on",
-    "editor.glyphMargin": true,
-    "editor.linkedEditing": false,
-    "editor.cursorStyle": "line",
-    "editor.minimap.maxColumn": 60,
-    "editor.minimap.scale": 2,
-    "editor.minimap.enabled": false,
-    "editor.showDeprecated": true,
-    "editor.comments.insertSpace": true,
-    "editor.renderWhitespace": "trailing",
-    "editor.detectIndentation": true,
-    "editor.insertSpaces": true,
-    "editor.suggestSelection": "recentlyUsedByPrefix",
-    "editor.acceptSuggestionOnEnter": "off",
-    "editor.suggest.showDeprecated": false,
-    "editor.suggest.showIcons": false,
-    "editor.language.colorizedBracketPairs": [["[", "]"], ["(", ")"], ["{", "}"]],
-    "editor.largeFileOptimizations": true,
+    "editor.formatOnType": false,
+    "editor.rulers": [80],
+    "editor.selectionHighlight": false,
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": "off",
+  },
 
-    "editor.tokenColorCustomizations": {
-        // Whie: EEFFFF EEFFE3
-        // Gray: 676E95
-        // Light-Gray: BABED8
-        // Orange: F78C6C FF9CAC
-        // Cyan: 89DDFF 81D4FA 2AACB8
-        // Light-Green: C3E88D F771E0
-        // Dark-Green: 00AA44 5F826B
-        // Blue: 82AAFF
-        // Yellow: FFCB6B
-        // Red: F07178 F75464 FF5370
-        // Purple: C77DBB
-        // Violet: D0D0FF C792EA
+  "[slim]": {
+    "editor.rulers": [179],
+    "editor.tabSize": 2,
+  },
 
-        "variables": "#EEFFFF",
-        "keywords": "#81D4FA",
-        "strings": "#C3E88D",
-        "comments": "#00AA44",
-        "functions": "#82AAFF",
-        "types": "#FFCB6B",
+  "[markdown]": {
+    "editor.wordWrap": "off",
+  },
 
-        "textMateRules": [
-            // Common
-            { "scope": "keyword.control", "settings": { "fontStyle": "" } },
-            { "scope": "constant.character.escape", "settings": { "foreground": "#81D4FA" } },
-            { "scope": "entity.other.attribute-name", "settings": { "fontStyle": "" } },
-            { "scope": "entity.other.inherited-class", "settings": { "foreground": "#C3E88D", } },
-            { "scope": "variable.parameter", "settings": { "foreground": "#F07178", "fontStyle": "" } },
-            { "scope": "variable.language.self", "settings": { "fontStyle": "" } },
-            { "scope": "comment", "settings": { "foreground": "#00AA44", "fontStyle": "" } },
-            // { "scope": "punctuation.definition.comment", "settings": { "foreground": "#00AA44" , "fontStyle": "" } },
-            // { "scope": "punctuation.definition.comment.shell", "settings": { "foreground": "#00AA44" } },
-            // { "scope": "punctuation.definition.comment.json.comments", "settings": { "foreground": "#00AA44" , "fontStyle": "" } },
-            { "scope": "comment punctuation.definition.comment", "settings": { "foreground": "#00AA44" , "fontStyle": "" } },
+  "[makefile]": {
+    "editor.insertSpaces": false,
+  },
 
-            // Ruby
-            { "scope": "source.ruby", "settings": { "foreground": "#EEFFFF" } },
-            // { "scope": "punctuation.definition.comment.ruby", "settings": { "foreground": "#00AA44" , "fontStyle": "" } },
-            { "scope": "variable.other.constant.ruby", "settings": { "foreground": "#F07178" } },
-            { "scope": "constant.other.symbol.hashkey.parameter.function.ruby", "settings": {"foreground": "#F07178" } },
-            { "scope": "variable.other.block.ruby", "settings": { "foreground": "#F07178" } },
-            { "scope": "keyword.other.special-method.ruby", "settings": { "foreground": "#82AAFF" } },
-            // { "scope": "string.quoted.single.ruby", "settings": { "foreground": "#C3E88D" } },
-            { "scope": "variable.language.self.ruby", "settings": {"foreground": "#F07178" } },
-            { "scope": "variable.parameter.function.ruby", "settings": { "foreground": "#F07178", "fontStyle": "" } },
-            { "scope": "constant.language.symbol.hashkey.ruby", "settings": { "foreground": "#F78C6C" } },
-            { "scope": "constant.language.symbol.ruby", "settings": { "foreground": "#F78C6C" } },
-            { "scope": "constant.language.nil.ruby", "settings": { "foreground": "#F78C6C" } },
-            { "scope": "constant.language.boolean.ruby", "settings": { "foreground": "#F78C6C" } },
-            { "scope": "constant.other.symbol.ruby", "settings": { "foreground": "#F78C6C"} }, // SG
-            { "scope": "constant.other.symbol.hashkey.ruby", "settings": { "foreground": "#F78C6C"} }, // SG
-
-            // Elixir
-            { "scope": "source.elixir", "settings": { "foreground": "#EEFFFF" } },
-            { "scope": "parameter.variable.function.elixir", "settings": { "foreground": "#FF5370" } },
-            { "scope": "entity.name.function-call.elixir", "settings": { "foreground": "#82AAFF" } },
-            // { "scope": "variable.other.constant.elixir", "settings": { "foreground": "#FFCB6B" } },
-            { "scope": "comment.unused.elixir", "settings": { "foreground": "#A6ACCD" } },
-            { "scope": "comment.wildcard.elixir", "settings": { "foreground": "#FF5370" } },
-            { "scope": "constant.language", "settings": { "foreground": "#F78C6C" } },
-            { "scope": "keyword.other", "settings": { "foreground": "#82AAFF" } },
-            { "scope": "constant.other.symbol.elixir", "settings": { "foreground": "#F78C6C" } },
-            { "scope": "variable.other.constant.elixir", "settings": { "foreground": "#FFCB6B" } },
-
-            // Kotlin
-            { "scope": "source.kotlin", "settings": { "foreground": "#EEFFFF" } },
-            { "scope": "meta.template.expression.kotlin", "settings": { "foreground": "#EEFFFF" } },
-        ]
+  "[json]": {
+    "editor.quickSuggestions": {
+      "strings": true,
     },
+    "editor.suggest.insertMode": "replace",
+  },
 
-    "files.autoSave": "onFocusChange",
-    "files.eol": "\n",
-    "files.insertFinalNewline": true,
-    // "files.trimFinalNewlines": true,
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml",
+  },
 
-    "workbench.colorTheme": "Material Theme Palenight High Contrast",
-    "workbench.tips.enabled": false,
-    "workbench.tree.indent": 16,
-    "workbench.editor.limit.enabled": true,
-    "workbench.editor.limit.value": 35,
-    "workbench.editor.pinnedTabSizing": "shrink",
-    "workbench.editor.highlightModifiedTabs": true,
-    "workbench.editor.focusRecentEditorAfterClose": false,
-    "workbench.editor.showTabs": "none",
-    "workbench.colorCustomizations": {
-        "editorBracketHighlight.foreground3": "#9CDCFE"
-    },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features",
+  },
 
-    "[elixir]": {
-        "editor.rulers": [119],
-        "editor.tabSize": 2,
-    },
+  "files.associations": {
+    "*.exs": "elixir",
+    "*.env": "shellscript",
+  },
 
-    "[ruby]": {
-        "editor.rulers": [
-            120
-        ],
-        "editor.tabSize": 2,
-        "files.trimTrailingWhitespace": true,
-        "files.trimFinalNewlines": true,
-        "editor.semanticHighlighting.enabled": true
-    },
+  "debug.console.fontSize": 16,
+  "debug.console.acceptSuggestionOnEnter": "on",
 
-    "[rust]": {
-        "editor.defaultFormatter": "rust-lang.rust-analyzer",
-        "editor.rulers": [92]
-    },
+  "diffEditor.codeLens": true,
+  "diffEditor.ignoreTrimWhitespace": true,
 
-    "[javascript]": {
-        "editor.rulers": [119]
-    },
+  "explorer.confirmDelete": false,
 
-    "[slim]": {
-        "editor.rulers": [179],
-        "editor.tabSize": 2
-    },
+  "git.openRepositoryInParentFolders": "never",
 
-    "[makefile]": {
-        "editor.insertSpaces": false
-    },
+  "markdown.preview.fontSize": 16,
 
-    "[json]": {
-        "editor.quickSuggestions": {
-        "strings": true
-    },
-        "editor.suggest.insertMode": "replace",
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
+  "window.commandCenter": false,
+  "window.menuBarVisibility": "toggle",
+  "window.restoreFullscreen": true,
+  "window.zoomLevel": 0.8,
 
-    "[xml]": {
-        "editor.defaultFormatter": "redhat.vscode-xml"
-    },
+  "search.collapseResults": "auto",
 
-    "[html]": {
-        "editor.defaultFormatter": "vscode.html-language-features"
-    },
+  "security.workspace.trust.untrustedFiles": "open",
 
-    "debug.console.fontSize": 16,
-    "debug.console.acceptSuggestionOnEnter": "on",
+  "explorer.confirmDragAndDrop": false,
 
-    "diffEditor.codeLens": true,
-    "diffEditor.ignoreTrimWhitespace": true,
+  "remote.SSH.connectTimeout": 60,
+  "remote.SSH.useLocalServer": false,
+  "remote.SSH.enableDynamicForwarding": false,
+  "remote.SSH.remotePlatform": {
+    "macbook": "macOS",
+  },
+  // "remote.SSH.useExecServer": true,
 
-    "explorer.confirmDelete": false,
+  // Plugin settings
 
-    "markdown.preview.fontSize": 16,
+  "gitlens.codeLens.enabled": false,
+  "elixirLS.suggestSpecs": false,
+  "rust-analyzer.check.command": "clippy",
 
-    "window.menuBarVisibility": "toggle",
-    "window.restoreFullscreen": true,
+  "rubyLsp.enabledFeatures": {
+    "inlayHint": false,
+    "codeLens": false,
+  },
 
-    "search.collapseResults": "auto",
+  "rubyLsp.featureFlags": {
+    "fullTestDiscovery": false,
+    "launcher": true,
+    "tapiocaAddon": false,
+  },
 
-    "security.workspace.trust.untrustedFiles": "open",
+  "rust-analyzer.inlayHints.parameterHints.enable": false,
+  "rust-analyzer.inlayHints.typeHints.enable": false,
+  "rust-analyzer.inlayHints.chainingHints.enable": false,
+  "rust-analyzer.lens.implementations.enable": false,
 
-    "explorer.confirmDragAndDrop": false,
+  "security.allowedUNCHosts": ["wsl.localhost"],
 
-    // Plugin settings
-
-    "indentRainbow.ignoreErrorLanguages": ["markdown", "ruby", "elixir", "commonlisp"],
-    "indentRainbow.colorOnWhiteSpaceOnly": true,
-    "gitlens.codeLens.enabled": false,
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "elixirLS.suggestSpecs": false,
-
-    "rust-analyzer.check.command": "clippy",
-
-    // "rubyLsp.rubyVersionManager": "custom",
-    // "rubyLsp.customRubyCommand": "eval \"$(mise env ruby@3.2.2 --shell bash)\"",
-
-    "rubyLsp.enabledFeatures": {
-        "inlayHint": false,
-        "codeLens": false,
-    },
-
-    "rubyLsp.featureFlags": {
-        "fullTestDiscovery": false,
-        "launcher": true,
-        "tapiocaAddon": false
-    },
-
-    "v-analyzer.serverPath": "~/.config/v-analyzer/bin/v-analyzer",
-    "dart.insertArgumentPlaceholders": false,
-    "cSpell.language": "en,ru",
-
-    "rust-analyzer.inlayHints.parameterHints.enable": false,
-    "rust-analyzer.inlayHints.typeHints.enable": false,
-    "rust-analyzer.inlayHints.chainingHints.enable": false,
-    "rust-analyzer.lens.implementations.enable": false,
+  "kilo-code.allowedCommands": ["git log", "git diff", "git show"],
+  "kilo-code.deniedCommands": [],
+  "terminal.integrated.commandsToSkipShell": [
+    "kilo-code.new.agentManagerOpen",
+    "kilo-code.new.agentManager.showTerminal"
+  ]
 }

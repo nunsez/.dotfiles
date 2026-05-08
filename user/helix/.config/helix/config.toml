@@ -32,8 +32,14 @@ character = "╎"
 render = true
 skip-levels = 1
 
+[editor.file-picker]
+hidden = false
+
 [keys.normal]
 "A-," = "goto_previous_buffer"
 "A-." = "goto_next_buffer"
 "A-w" = ":buffer-close"
 "A-/" = "repeat_last_motion"
+
+[keys.insert.j]
+"k" = "normal_mode"

@@ -1,16 +1,20 @@
 if status is-interactive
     # Disable greeting
-    set -g fish_greeting
-    set -gx GPG_TTY (tty)
+    set --global fish_greeting
+    set --global --export GPG_TTY (tty)
     # Erlang/Elixir history
-    set -gx ERL_AFLAGS "-kernel shell_history enabled"
+    set --global --export ERL_AFLAGS "-kernel shell_history enabled"
+    set --global --export ANDROID_HOME "~/Android/Sdk"
+    set --global --export ANDROID_SDK_ROOT "~/Android/Sdk"
 
     # Editor selection
     if command -v hx >/dev/null
-        set -gx EDITOR hx
+        set --global --export EDITOR hx
     else
-        set -gx EDITOR nano
+        set --global --export EDITOR nano
     end
 
     fish_add_path ~/.local/bin
+    fish_add_path ~/.mix/escripts
+    fish_add_path --global --prepend ~/p/flutter/bin
 end
